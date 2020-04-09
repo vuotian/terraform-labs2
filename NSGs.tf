@@ -91,7 +91,7 @@ resource "azurerm_network_security_rule" "AllowRDP" {
     source_port_range           = "*"
     source_address_prefix       = "*"
 
-
+}
 resource "azurerm_network_security_group" "nic_ubuntu" {
    name = "NIC_Ubuntu"
    resource_group_name  = azurerm_resource_group.nsgs.name
@@ -118,7 +118,7 @@ resource "azurerm_network_security_group" "nic_windows" {
     tags = azurerm_resource_group.nsgs.tags
 
     security_rule {
-        name = "AllowRDP"
+        name = "allowremoteaccess"
         priority = 100
         direction = "Inbound"
         access = "Allow"
