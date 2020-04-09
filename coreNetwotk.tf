@@ -48,7 +48,8 @@ resource "azurerm_subnet" "dev" {
 }
 
 
-resource "azurerm_virtual_network_gateway" "vpnGateway" {
+/*
+ resource "azurerm_virtual_network_gateway" "vpnGateway" {
     name = "vpnGateway"
     location = azurerm_resource_group.core.location
     resource_group_name = azurerm_resource_group.core.name
@@ -70,8 +71,7 @@ resource "azurerm_virtual_network_gateway" "vpnGateway" {
 
 
 }
-
-
+*/
 
 
 
