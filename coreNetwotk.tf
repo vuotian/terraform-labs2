@@ -56,14 +56,14 @@ resource "azurerm_virtual_network_gateway" "vpnGateway" {
     type = "Vpn"
     vpn_type = "RouteBased"
 
-    enable_bgb = true
+    enable_bgp = true
     sku = "Basic"
 
     ip_configuration {
         name = "VnetGatewayConfig"
-        public_ip_address_id = azurerm_public_ip.vpnGatewayPublicIp.public_ip_address_id
+        public_ip_address_id = azurerm_public_ip.vpnGatewayPublicIp.id
         private_ip_address_allocation = "Dynamic"
-        subnet_id = azurerm_subnet.GatewaySubnet.public_ip_address_id
+        subnet_id = azurerm_subnet.GatewaySubnet.id
 
     }
 
