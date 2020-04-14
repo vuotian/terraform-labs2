@@ -38,6 +38,6 @@ resource "azurerm_app_service" "citadel" {
 }
 
 output "webapps_ids_" {
-  decription = "id's of all webapps"
-  value = azurerm_app_service.*.id
+  description = "id's of all webapps"
+  value = azurerm_app_service.citadel.*.id
 }

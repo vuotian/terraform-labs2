@@ -6,7 +6,7 @@ variable "webapplocs" {
 
 variable "loc" {
   description = "Default azure region"
-  default     = "westeurope"
+  default     = "eastus2"
 }
 
 variable "tags" {
