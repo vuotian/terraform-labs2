@@ -1,7 +1,12 @@
+module "scaffold" {
+  source    = "C:/Users/anvuo1/Documents/Terraform Study/Training/terraform-labs2/terraform-module-scaffold/"
+}
+
+
 resource "azurerm_resource_group" "webapps" {
   name     = "webapps"
-  location = var.loc
-  tags     = var.tags
+  location = "${var.loc}"
+  tags     = "${var.tags}"
 }
 
 resource "random_string" "webapprnd" {
